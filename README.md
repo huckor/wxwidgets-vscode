@@ -11,6 +11,6 @@ Project is using wxWidgets libraries from folders structure as it's explained in
 3. When you pass step 2 of prerequisites section then your environment is ready for compiling this project. Which means compiler, linker, SDK and libraries are installed. 
 
 ## Compile
-In vscode hit CTRL + SHIFT + B for Linux & Windows
-In vscode hit CMD + SHIFT + B for macOS.
-Or in vscode select Terminal -> Run Build Task ...
+* In vscode hit CTRL + SHIFT + B for Linux & Windows
+* In vscode hit CMD + SHIFT + B for macOS.
+*Or in vscode select Terminal -> Run Build Task ...
