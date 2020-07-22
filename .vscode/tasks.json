@@ -1,0 +1,209 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Compile & Link",
+            "linux":{
+                "command": "g++",
+                "args": [
+                    "-o",
+                    "${workspaceFolder}/out/myapp",
+                    "${workspaceFolder}/out/**.o",
+                    "-L${workspaceFolder}/dep/linux/linux_lib/lib",
+                    "-Bstatic",
+                    "-pthread",
+                    "-lwx_gtk3u_core-3.0",
+                    "-lwx_baseu-3.0",
+                    "-lwxtiff-3.0",
+                    "-lwxjpeg-3.0",
+                    "-lgtk-3",
+                    "-lgdk-3",
+                    "-lpangocairo-1.0",
+                    "-lpango-1.0",
+                    "-lharfbuzz",
+                    "-latk-1.0",
+                    "-lcairo-gobject",
+                    "-lcairo",
+                    "-lgdk_pixbuf-2.0",
+                    "-lgio-2.0",
+                    "-lgobject-2.0",
+                    "-lgthread-2.0",
+                    "-lglib-2.0",
+                    "-lX11",
+                    "-lSM",
+                    "-lpng",
+                    "-lz",
+                    "-lwxregexu-3.0",
+                    "-ldl",
+                    "-lm"                    
+                ]
+            },
+            "osx":{
+                "command": "g++",
+                "args": [
+                    "-I${workspaceFolder}/dep/mac/mac_lib/lib/wx/include/osx_cocoa-unicode-static-3.0",
+                    "-I${workspaceFolder}/dep/mac/include",
+                    "-isysroot",
+                    "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk",
+                    "-mmacosx-version-min=10.14",
+                    "${workspaceFolder}/out/main.o",
+                    "-o",
+                    "${workspaceFolder}/out/myapp",
+                    "-L${workspaceFolder}/dep/mac/mac_lib/lib",
+                    "-Bstatic",
+                    "-framework",
+                    "IOKit",
+                    "-framework",
+                    "Carbon",
+                    "-framework",
+                    "Cocoa",
+                    "-framework",
+                    "AudioToolbox",
+                    "-framework",
+                    "System",
+                    "-framework",
+                    "OpenGL",
+                    "-framework",
+                    "WebKit",
+                    "-lwx_osx_cocoau_core-3.0",
+                    "-lwx_baseu-3.0",
+                    "-lwxtiff-3.0",
+                    "-lwxjpeg-3.0",
+                    "-lwxpng-3.0",
+                    "-lwxregexu-3.0",
+                    "-lz",
+                    "-lpthread",
+                    "-liconv",
+                    "-llzma"
+                ],
+            },
+            "windows": {
+                "command": "c:\\mingw-w64\\mingw64\\bin\\g++.exe",
+                "args": [
+                    "-L${workspaceFolder}\\dep\\win\\lib\\gcc_lib",
+                    "-Lc:\\mingw-w64\\mingw64\\x86_64-w64-mingw32\\lib",
+                    "-mwindows",
+                    "-static",                                        
+                    "${workspaceFolder}\\out\\**.o",
+                    "-o",
+                    "${workspaceFolder}\\out\\myapp.exe",
+                    "-lwxmsw30u_core",
+                    "-lwxbase30u",
+                    "-lwxpng",
+                    "-lcomdlg32",
+                    "-lgdi32",
+                    "-lcomctl32",
+                    "-lole32",
+                    "-loleaut32",
+                    "-ldmoguids",
+                    "-luuid",
+                    "-lwinspool",
+                    "-lz"
+                ],
+              },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "dependsOn": [
+                "Compile"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "Compile",
+            "linux":{
+                "command": "g++",
+                "args": [                    
+                    "-c",
+                    "${workspaceFolder}/src/**.cpp",
+                    "-o",
+                    "${workspaceFolder}/out/${fileBasenameNoExtension}.o",
+                    "-g",
+                    "-D__WXGTK__",
+                    "-D_FILE_OFFSET_BITS=64",
+                    "-DWX_PRECOMP",
+                    "-fno-strict-aliasing",
+                    "-pthread",
+                    "-I${workspaceFolder}/dep/linux/linux_lib/lib/wx/include/gtk3-unicode-static-3.0",
+                    "-I${workspaceFolder}/dep/linux/include",                    
+                    "-I/usr/include/gtk-3.0",
+                    "-I/usr/include/at-spi2-atk/2.0",
+                    "-I/usr/include/at-spi-2.0",
+                    "-I/usr/include/dbus-1.0",
+                    "-I/usr/lib/x86_64-linux-gnu/dbus-1.0/include",
+                    "-I/usr/include/gio-unix-2.0",
+                    "-I/usr/include/cairo",
+                    "-I/usr/include/pango-1.0",
+                    "-I/usr/include/fribidi",
+                    "-I/usr/include/harfbuzz",
+                    "-I/usr/include/atk-1.0",
+                    "-I/usr/include/pixman-1",
+                    "-I/usr/include/uuid",
+                    "-I/usr/include/freetype2",
+                    "-I/usr/include/libpng16",
+                    "-I/usr/include/gdk-pixbuf-2.0",
+                    "-I/usr/include/libmount",
+                    "-I/usr/include/blkid",
+                    "-I/usr/include/glib-2.0",
+                    "-I/usr/lib/x86_64-linux-gnu/glib-2.0/include",                    
+                    "-I/usr/include/gtk-3.0/unix-print",
+                    "-Wall"                    
+                ]
+            },
+            "osx":{
+                "command": "g++",
+                "args": [
+                    "-I${workspaceFolder}/dep/mac/mac_lib/lib/wx/include/osx_cocoa-unicode-static-3.0",
+                    "-I${workspaceFolder}/dep/mac/include",
+                    "-isysroot",
+                    "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk",
+                    "-mmacosx-version-min=10.14",
+                    "-c",
+                    "${workspaceFolder}/src/**.cpp",
+                    "-o",
+                    "${workspaceFolder}/out/${fileBasenameNoExtension}.o",
+                    "-g",
+                    "-D__WXOSX_COCOA__",
+                    "-D_FILE_OFFSET_BITS=64",
+                    "-D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=1",
+                    "-DWX_PRECOMP",
+                    "-fno-strict-aliasing",
+                    "-fno-common",
+                    "-Wall"
+                ]
+            },
+            "windows": {
+                "command": "c:\\mingw-w64\\mingw64\\bin\\g++.exe",
+                "args": [
+                    "-I${workspaceFolder}\\dep\\win\\lib\\gcc_lib\\mswu",
+                    "-I${workspaceFolder}\\dep\\win\\include",                    
+                    "-c",
+                    "${workspaceFolder}\\src\\**.cpp",
+                    "-o",
+                    "${workspaceFolder}\\out\\${fileBasenameNoExtension}.o",
+                    "-g",
+                    "-Wall",
+                    "-D_WINDOWS",
+                    "-D_UNICODE",
+                    "-D__WXMSW__",
+                    "-DNDEBUG",
+                    "-DNOPCH"
+                ],
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
