@@ -1,5 +1,5 @@
 # wxWidgets "Hello World" project for Visual Studio Code
-wxWidgets "Hello World" project made in Visual Studio Code. Can be used for making Windows, Linux and macOS GUI applications using C or C++ languages. Project support compiling & debugging & intellisense in Visual Studio Code. 
+wxWidgets "Hello World" project made in Visual Studio Code. Can be used for making Windows, Linux and macOS GUI applications using C++ language. Project support compiling & debugging & intellisense in Visual Studio Code. 
 Motivation for make this project was to use one IDE and one source code for all 3 major OS's.
 
 ## Prerequisites
