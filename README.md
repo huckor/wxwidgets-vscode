@@ -2,7 +2,8 @@
 wxWidgets "Hello World" project made in Visual Studio Code. Can be used for making Windows, Linux and macOS GUI applications using C++ language. Project support compiling & debugging & intellisense in Visual Studio Code. 
 Motivation for make this project was to use one IDE and one source code for all 3 major OS's.
 
-## This is branch for wxWidgets 3.0.5
+## This is branch for wxWidgets 3.1.4
+In case you want to use wxWidgets 3.0.5 then switch to wx_3.0.5 release https://github.com/huckor/wxwidgets-vscode/tree/wx_3.0.5.
 
 ## Prerequisites
 1. Install Visual Studio Code with C/C++ extension for VS Code. You can follow this official tutorial: https://code.visualstudio.com/docs/cpp/config-mingw
