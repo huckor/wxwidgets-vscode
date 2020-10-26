@@ -174,11 +174,11 @@
             "osx":{
                 "command": "g++",
                 "args": [
-                    "-I${workspaceFolder}/dep/mac/mac_lib/lib/wx/include/osx_cocoa-unicode-static-3.0",
+                    "-I${workspaceFolder}/dep/mac/mac_lib/lib/wx/include/osx_cocoa-unicode-static-3.1",
                     "-I${workspaceFolder}/dep/mac/include",
                     "-isysroot",
-                    "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk",
-                    "-mmacosx-version-min=10.14",
+                    "/System/Volumes/Data/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+                    "-mmacosx-version-min=10.15",
                     "-c",
                     "${workspaceFolder}/src/**.cpp",
                     "-o",
