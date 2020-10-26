@@ -95,8 +95,8 @@
                     "${workspaceFolder}\\out\\**.o",
                     "-o",
                     "${workspaceFolder}\\out\\myapp.exe",
-                    "-lwxmsw30u_core",
-                    "-lwxbase30u",
+                    "-lwxmsw31u_core",
+                    "-lwxbase31u",
                     "-lwxpng",
                     "-lcomdlg32",
                     "-lgdi32",
@@ -106,7 +106,13 @@
                     "-ldmoguids",
                     "-luuid",
                     "-lwinspool",
-                    "-lz"
+                    "-lz",
+                    "-lwxregexu",
+                    "-lwxzlib",
+                    "-luxtheme",
+                    "-loleacc",
+                    "-lshlwapi",
+                    "-lversion"
                 ],
               },
             "group": {
