@@ -11,12 +11,12 @@
                     "${workspaceFolder}/out/myapp",
                     "${workspaceFolder}/out/**.o",
                     "-L${workspaceFolder}/dep/linux/linux_lib/lib",
-                    "-Bstatic",
+                    "-Bstatic",                     
                     "-pthread",
-                    "-lwx_gtk3u_core-3.0",
-                    "-lwx_baseu-3.0",
-                    "-lwxtiff-3.0",
-                    "-lwxjpeg-3.0",
+                    "-lwx_gtk3u_core-3.1",
+                    "-lwx_baseu-3.1",
+                    "-lwxtiff-3.1",
+                    "-lwxjpeg-3.1",
                     "-lgtk-3",
                     "-lgdk-3",
                     "-lpangocairo-1.0",
@@ -34,9 +34,13 @@
                     "-lSM",
                     "-lpng",
                     "-lz",
-                    "-lwxregexu-3.0",
+                    "-lwxregexu-3.1",
                     "-ldl",
-                    "-lm"                    
+                    "-lm",
+                    "-lXtst",
+                    "-lpangoft2-1.0",
+                    "-lfontconfig",
+                    "-lfreetype"                    
                 ]
             },
             "osx":{
@@ -135,7 +139,7 @@
                     "-DWX_PRECOMP",
                     "-fno-strict-aliasing",
                     "-pthread",
-                    "-I${workspaceFolder}/dep/linux/linux_lib/lib/wx/include/gtk3-unicode-static-3.0",
+                    "-I${workspaceFolder}/dep/linux/linux_lib/lib/wx/include/gtk3-unicode-static-3.1",
                     "-I${workspaceFolder}/dep/linux/include",                    
                     "-I/usr/include/gtk-3.0",
                     "-I/usr/include/at-spi2-atk/2.0",
@@ -158,7 +162,7 @@
                     "-I/usr/include/glib-2.0",
                     "-I/usr/lib/x86_64-linux-gnu/glib-2.0/include",                    
                     "-I/usr/include/gtk-3.0/unix-print",
-                    "-Wall"                    
+                    "-Wall"                   
                 ]
             },
             "osx":{
