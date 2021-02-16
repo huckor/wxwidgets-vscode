@@ -9,7 +9,7 @@
                 "args": [
                     "-o",
                     "${workspaceFolder}/out/myapp",
-                    "${workspaceFolder}/out/**.o",
+                    "${workspaceFolder}/**.o",
                     "-L${workspaceFolder}/dep/linux/linux_lib/lib",
                     "-Bstatic",                     
                     "-pthread",
@@ -137,8 +137,6 @@
                 "args": [                    
                     "-c",
                     "${workspaceFolder}/src/**.cpp",
-                    "-o",
-                    "${workspaceFolder}/out/${fileBasenameNoExtension}.o",
                     "-g",
                     "-D__WXGTK__",
                     "-D_FILE_OFFSET_BITS=64",
