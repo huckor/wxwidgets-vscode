@@ -8,10 +8,11 @@ In case you want to use wxWidgets 3.0.5 then switch to wx_3.0.5 release https://
 ## Prerequisites
 1. Install Visual Studio Code with C/C++ extension for VS Code. You can follow this official tutorial: https://code.visualstudio.com/docs/cpp/config-mingw
 
-2. wxWidgets have to be compiled before you'll be able to compile this project. See /doc folder for info how to do it. There is separate pdf document per Operating Systems. 
+2. wxWidgets have to be compiled before you'll be able to compile this project. See /doc folder for info how to do it. There is separate pdf document per Operating System. 
 Project is using wxWidgets libraries from folders structure as it's explained in /doc folder. In case you use different folders structure you need to modify tasks.json, launch.json and c_cpp_properties.json.
 
-3. When you pass step 2 of prerequisites section then your environment is ready for compiling this project. Which means compiler, linker, SDK and libraries are installed. 
+3. When you pass step 2 of prerequisites section then your environment should be ready for compiling this project. Which means compiler, linker, SDK and libraries are installed. 
+MacOS project possibly require few changes in tasks.json file. Required changes are explained in /doc/mac.pdf file.
 
 ## Compile
 * In vscode hit CTRL + SHIFT + B for Linux & Windows
