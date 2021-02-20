@@ -18,3 +18,6 @@ MacOS project possibly require few changes in tasks.json file. Required changes 
 * In vscode hit CTRL + SHIFT + B for Linux & Windows
 * In vscode hit CMD + SHIFT + B for macOS.
 * Or in vscode select Terminal -> Run Build Task ...
+
+## What's new
+* Added support for multiple source code files and folders. All source code files and folders has to be inside src folder.
