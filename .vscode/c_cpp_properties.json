@@ -17,7 +17,7 @@
             "compilerPath": "c:\\mingw-w64\\mingw64\\bin\\g++.exe",
             "cStandard": "c11",
             "cppStandard": "gnu++14",
-            "intelliSenseMode": "clang-x86"
+            "intelliSenseMode": "gcc-x86"
         },
         {
             "name": "Mac",
