@@ -45,9 +45,9 @@
                     "-I${workspaceFolder}/dep/mac/mac_lib/lib/wx/include/osx_cocoa-unicode-static-3.0",
                     "-I${workspaceFolder}/dep/mac/include",
                     "-isysroot",
-                    "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk",
-                    "-mmacosx-version-min=10.14",
-                    "${workspaceFolder}/out/main.o",
+                    "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk",
+                    "-mmacosx-version-min=10.15",
+                    "${workspaceFolder}/out/**.o",
                     "-o",
                     "${workspaceFolder}/out/myapp",
                     "-L${workspaceFolder}/dep/mac/mac_lib/lib",
@@ -79,7 +79,7 @@
                 ],
             },
             "windows": {
-                "command": "c:\\mingw-w64\\mingw64\\bin\\g++.exe",
+                "command": "g++",
                 "args": [
                     "-L${workspaceFolder}\\dep\\win\\lib\\gcc_lib",
                     "-Lc:\\mingw-w64\\mingw64\\x86_64-w64-mingw32\\lib",
@@ -113,7 +113,7 @@
                 "$gcc"
             ],
             "dependsOn": [
-                "Compile"
+                "MoveObjects"
             ]
         },
         {
@@ -123,9 +123,12 @@
                 "command": "g++",
                 "args": [                    
                     "-c",
-                    "${workspaceFolder}/src/**.cpp",
-                    "-o",
-                    "${workspaceFolder}/out/${fileBasenameNoExtension}.o",
+                    "$(find",
+                    "${workspaceFolder}/src/",
+                    "-type",
+                    "f",
+                    "-iregex",
+                    "'.*\\.cpp')",
                     "-g",
                     "-D__WXGTK__",
                     "-D_FILE_OFFSET_BITS=64",
@@ -164,12 +167,15 @@
                     "-I${workspaceFolder}/dep/mac/mac_lib/lib/wx/include/osx_cocoa-unicode-static-3.0",
                     "-I${workspaceFolder}/dep/mac/include",
                     "-isysroot",
-                    "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk",
-                    "-mmacosx-version-min=10.14",
+                    "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk",
+                    "-mmacosx-version-min=10.15",
                     "-c",
-                    "${workspaceFolder}/src/**.cpp",
-                    "-o",
-                    "${workspaceFolder}/out/${fileBasenameNoExtension}.o",
+                    "$(find",
+                    "${workspaceFolder}/src/",
+                    "-type",
+                    "f",
+                    "-iregex",
+                    "'.*\\.cpp')",
                     "-g",
                     "-D__WXOSX_COCOA__",
                     "-D_FILE_OFFSET_BITS=64",
@@ -181,14 +187,21 @@
                 ]
             },
             "windows": {
-                "command": "c:\\mingw-w64\\mingw64\\bin\\g++.exe",
+                "command": "g++",
                 "args": [
                     "-I${workspaceFolder}\\dep\\win\\lib\\gcc_lib\\mswu",
                     "-I${workspaceFolder}\\dep\\win\\include",                    
                     "-c",
-                    "${workspaceFolder}\\src\\**.cpp",
-                    "-o",
-                    "${workspaceFolder}\\out\\${fileBasenameNoExtension}.o",
+                    "$(",
+                    "dir",
+                    "-Path",                    
+                    "${workspaceFolder}\\src",
+                    "-Filter",
+                    "*.cpp",
+                    "-Recurse",
+                    "|",
+                    "%{$_.FullName}",
+                    ")",
                     "-g",
                     "-Wall",
                     "-D_WINDOWS",
@@ -203,6 +216,41 @@
             },
             "problemMatcher": [
                 "$gcc"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "MoveObjects",
+            "linux":{
+                "command": "mv",
+                "args": [                    
+                    "${workspaceFolder}/*.o",
+                    "${workspaceFolder}/out/"                 
+                ]
+            },
+            "osx":{
+                "command": "mv",
+                "args": [
+                    "${workspaceFolder}/*.o",
+                    "${workspaceFolder}/out/"
+                ]
+            },
+            "windows": {
+                "command": "Move-Item",
+                "args": [
+                    "-Path",
+                    "${workspaceFolder}\\*.o",
+                    "-Destination",
+                    "${workspaceFolder}\\out",
+                    "-Force"
+                ],
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "dependsOn": [                
+                "Compile"
             ]
         }
     ]
