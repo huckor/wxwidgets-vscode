@@ -3,6 +3,7 @@ wxWidgets "Hello World" project made in Visual Studio Code. Can be used for maki
 Motivation for make this project was to use one IDE and one source code for all 3 major OS's.
 
 ## This is branch for wxWidgets 3.0.5
+It means you have to use it with wxWidgets 3.0.5.
 n case you want to use wxWidgets 3.1.4 then switch to wx_3.1.4_v2 release or to master branch.
 
 ## Prerequisites
