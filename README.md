@@ -2,8 +2,8 @@
 wxWidgets "Hello World" project made in Visual Studio Code. Can be used for making Windows, Linux and macOS GUI applications using C++ language. Project support compiling & debugging & intellisense in Visual Studio Code. 
 Motivation for make this project was to use one IDE and one source code for all 3 major OS's.
 
-## This is branch for wxWidgets 3.1.4
-It means you have to use it with wxWidgets 3.1.4.
+## This is branch for wxWidgets 3.1.4 and later
+It means you have to use it with wxWidgets 3.1.4 or newer.
 In case you want to use wxWidgets 3.0.5 then switch to wx_3.0.5_v2 release or to develop_wx_3.0.5 branch.
 
 ## Prerequisites
@@ -13,7 +13,7 @@ In case you want to use wxWidgets 3.0.5 then switch to wx_3.0.5_v2 release or to
 Project is using wxWidgets libraries from folders structure as it's explained in /doc folder. In case you use different folders structure you need to modify tasks.json, launch.json and c_cpp_properties.json.
 
 3. When you pass step 2 of prerequisites section then your environment should be ready for compiling this project. Which means compiler, linker, SDK and libraries are installed. 
-MacOS project possibly require few changes in tasks.json file. Required changes are explained in /doc/mac.pdf file.
+MacOS project possibly require few changes in tasks.json file in case you used different MacOS SDK than one mentioned in /doc/mac.pdf. Required changes are explained in /doc/mac.pdf file on second page.
 
 ## Compile
 * In vscode hit CTRL + SHIFT + B for Linux & Windows
@@ -21,4 +21,5 @@ MacOS project possibly require few changes in tasks.json file. Required changes 
 * Or in vscode select Terminal -> Run Build Task ...
 
 ## What's new
+* Added document for wxwidgets compilation for Raspbian OS running on ARM Raspberry Pi hardware.
 * Added support for multiple source code files and folders. All source code files and folders has to be inside src folder.
