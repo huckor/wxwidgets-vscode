@@ -34,7 +34,6 @@
                     "-lSM",
                     "-lpng",
                     "-lz",
-                    "-lwxregexu-3.1",
                     "-ldl",
                     "-lm",
                     "-lXtst",
