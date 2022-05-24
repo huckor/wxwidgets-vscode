@@ -8,7 +8,7 @@ This Visual Studio Code project keep changing because wxWidgets are in active de
 **Pick according this list**
 
 - wxWidgets 3.1.6: 
-[Git Branch](https://github.com/huckor/wxwidgets-vscode/tree/develop_wx_3.1.6)
+[Git Branch](https://github.com/huckor/wxwidgets-vscode/tree/develop_wx_3.1.6) or [Release](https://github.com/huckor/wxwidgets-vscode/releases/tag/wx_3.1.6)
 
 - wxWidgets 3.1.4 or 3.1.5: 
 [Git Branch](https://github.com/huckor/wxwidgets-vscode/tree/develop_wx_3.1.5) or [Release](https://github.com/huckor/wxwidgets-vscode/releases/tag/wx_3.1.4_v2)
