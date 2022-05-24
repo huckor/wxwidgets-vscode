@@ -3,20 +3,18 @@ wxWidgets "Hello World" project made in Visual Studio Code. Can be used for maki
 Motivation for make this project was to use one IDE and one source code for all 3 major OS's.
 
 ## Different versions of wxWidgets
-Visual Studio Code project keep changing because wxWidgets are in active development. For this reason I keeping few permanent branches in this repository. You need to pick correct branch or release according wxWidgets version you decide to use. 
+This Visual Studio Code project keep changing because wxWidgets are in active development. For this reason I'm keeping few permanent branches in this repository. You need to pick correct branch or release according wxWidgets version you decide to use. 
 
-* Pick according this list
+** Pick according this list **
 
 - wxWidgets 3.1.6: 
 [Git Branch](https://github.com/huckor/wxwidgets-vscode/tree/develop_wx_3.1.6)
 
 - wxWidgets 3.1.4 or 3.1.5: 
-[Git Branch](https://github.com/huckor/wxwidgets-vscode/tree/develop_wx_3.1.5)
-[Release](https://github.com/huckor/wxwidgets-vscode/releases/tag/wx_3.1.4_v2)
+[Git Branch](https://github.com/huckor/wxwidgets-vscode/tree/develop_wx_3.1.5) or [Release](https://github.com/huckor/wxwidgets-vscode/releases/tag/wx_3.1.4_v2)
 
 - wxWidgets 3.0.5: 
-[Git Branch](https://github.com/huckor/wxwidgets-vscode/tree/develop_wx_3.0.5)
-[Release](https://github.com/huckor/wxwidgets-vscode/releases/tag/wx_3.0.5_v2)
+[Git Branch](https://github.com/huckor/wxwidgets-vscode/tree/develop_wx_3.0.5) or [Release](https://github.com/huckor/wxwidgets-vscode/releases/tag/wx_3.0.5_v2)
 
 ## Prerequisites
 1. Install Visual Studio Code with C/C++ extension for VS Code. You can follow this [official tutorial](https://code.visualstudio.com/docs/cpp/config-mingw)
