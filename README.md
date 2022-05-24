@@ -5,7 +5,7 @@ Motivation for make this project was to use one IDE and one source code for all 
 ## Different versions of wxWidgets
 This Visual Studio Code project keep changing because wxWidgets are in active development. For this reason I'm keeping few permanent branches in this repository. You need to pick correct branch or release according wxWidgets version you decide to use. 
 
-** Pick according this list **
+**Pick according this list**
 
 - wxWidgets 3.1.6: 
 [Git Branch](https://github.com/huckor/wxwidgets-vscode/tree/develop_wx_3.1.6)
@@ -32,5 +32,3 @@ MacOS project possibly require few changes in tasks.json file in case you used d
 
 ## What's new
 * Update project to comply with wxWidgets 3.1.6
-* Added document for wxwidgets compilation for Raspbian OS running on ARM Raspberry Pi hardware.
-* Added support for multiple source code files and folders. All source code files and folders has to be inside src folder.
