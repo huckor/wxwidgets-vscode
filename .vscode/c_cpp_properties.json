@@ -23,7 +23,7 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/src/**",
-                "${workspaceFolder}/dep/mac/mac_lib/lib/wx/include/osx_cocoa-unicode-static-3.1",
+                "${workspaceFolder}/dep/mac/mac_lib/lib/wx/include/osx_cocoa-unicode-static-3.2",
                 "${workspaceFolder}/dep/mac/include"                
             ],
             "defines": [
