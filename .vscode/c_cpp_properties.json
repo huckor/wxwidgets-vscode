@@ -41,7 +41,7 @@
             "name": "Linux",            
             "includePath": [
                 "${workspaceFolder}/src/**",
-                "${workspaceFolder}/dep/linux/linux_lib/lib/wx/include/gtk3-unicode-static-3.1",
+                "${workspaceFolder}/dep/linux/linux_lib/lib/wx/include/gtk3-unicode-static-3.2",
                 "${workspaceFolder}/dep/linux/include"           
             ],            
             "defines": [
